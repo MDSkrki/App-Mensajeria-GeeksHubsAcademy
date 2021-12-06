@@ -23,3 +23,10 @@ Se valorará:
  - Buen naming en las variables
  - Aplicación de buenas prácticas como reutilización de funciones
  - Adaptación responsive para que se visualice todo correctamentes en todos los dispositivos
+
+ Progreso del desarrollo:
+
+ Rama "develop": servirá para mantener la estructura central de la app, sin llegar a usar la rama main.
+
+Nueva rama para estructura de la página: WIP-main-structure (desde develop)
+Aquí se creará la estructura de la página antes de darle funcionalidad ni demasiada estética para asentar las bases de los objetivos a cumplir.
