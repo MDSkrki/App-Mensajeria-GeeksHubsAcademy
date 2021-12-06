@@ -8,9 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <div class="sideNav"></div>
-
+    <div id="main">
+        <header>
+        
+            
+            <h1>
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+                Somkereki's Messages
+            </h1>
+            
+        </header>
+        <!--Creation of a sidebar for group selection-->
+        <!--Groups will be pointed at using <a href> tag-->
+        <div class="sideNav" id="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+    </div>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,53 @@
+/* Sidebar Navigation system */
 .sideNav {
     background-color: blue;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 3em;
+    transition: 0.5s;
 }
+
+.sideNav a {
+    padding: 0.5em 0.5em 0.5em 2em;
+    text-decoration: none;
+    font-size: 25px;
+    color: grey;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideNav a:hover {
+    color: white;
+}
+
+.sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 0.7em;
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+    padding: 0.4em 0.6em;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: whitesmoke;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
