@@ -1,15 +1,22 @@
+/* This main gives rules for the entire page, the main container */
+#main {
+    transition: margin-left .5s;
+    padding: 2em;
+    display: block;
+    font-family: 'Lato';
+}
+
 /* Sidebar Navigation system */
 .sideNav {
     background-color: blue;
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
-    overflow-x: hidden;
-    padding-top: 3em;
+    overflow: auto;
     transition: 0.5s;
+    scroll-behavior: smooth;
 }
 
 .sideNav a {
@@ -61,8 +68,8 @@
     background-color: whitesmoke;
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 2em;
-    display: block;
+/* Organización del contenedor principal de los mensajes */
+.mainView {
+    background-color: gray;
+    scroll-behavior: smooth;
 }
