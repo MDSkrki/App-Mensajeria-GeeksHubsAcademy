@@ -2,11 +2,11 @@
  Reto final Programacion desde Cero GeeksHubs Academy
 
 Objetivos de la app:
-1 - Los usuarios pueden crear channels de comunicación
-2 - Los usuarios deben poder escribir mensajes en los canales creados
-3 - Los canales y las conversaciones tienen que tener histórico scrollable hacia atrás en el tiempo.
-4 - Los mensajes tienen que mostrar la fecha y hora en la que se crearon
-5 - Los usuarios tienen que poder buscar entre todos los mensajes de todos los canales en un buscador global
+1. Los usuarios pueden crear channels de comunicación
+2. Los usuarios deben poder escribir mensajes en los canales creados
+3. Los canales y las conversaciones tienen que tener histórico scrollable hacia atrás en el tiempo.
+4. Los mensajes tienen que mostrar la fecha y hora en la que se crearon
+5. Los usuarios tienen que poder buscar entre todos los mensajes de todos los canales en un buscador global
 
 Tips para crear canales:
  - Canales guardados en array
@@ -30,3 +30,6 @@ Se valorará:
 
 Nueva rama para estructura de la página: WIP-main-structure (desde develop)
 Aquí se creará la estructura de la página antes de darle funcionalidad ni demasiada estética para asentar las bases de los objetivos a cumplir.
+
+Comprobación del intento de adjuntar imágenes como proceso del desarrollo:
+![Captura pantalla](./img/Progreso_creacion_Sidebar.png)
