@@ -15,8 +15,8 @@
 .sideNav a {
     padding: 0.5em 0.5em 0.5em 2em;
     text-decoration: none;
-    font-size: 25px;
-    color: grey;
+    font-size: 1em;
+    color: lightgray;
     display: block;
     transition: 0.3s;
 }
@@ -28,9 +28,24 @@
 .sideNav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    right: 0.4em;
+    font-size: 2em;
+    margin-left: 1.3em;
+}
+
+.sideNav h2 {
+    padding: 0.5em 0.5em 0.5em 2em;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sideNav h3 {
+    padding: 0.5em 0.5em 0.5em 2em;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
 }
 
 .openbtn {
@@ -48,6 +63,6 @@
 
 #main {
     transition: margin-left .5s;
-    padding: 20px;
+    padding: 2em;
+    display: block;
 }
-
