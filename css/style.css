@@ -6,9 +6,22 @@
     font-family: 'Lato';
 }
 
+header {
+    display: inline;
+}
+
+header #searchBar {
+    float: right;
+    padding: 0.5em;
+}
+
+input[type="text"] {
+    font-family: 'Lato';
+}
+
 /* Sidebar Navigation system */
 .sideNav {
-    background-color: blue;
+    background-color: #366999;
     height: 100%;
     width: 0;
     position: fixed;
@@ -70,6 +83,6 @@
 
 /* Organización del contenedor principal de los mensajes */
 .mainView {
-    background-color: gray;
+    background-color: #366999;
     scroll-behavior: smooth;
 }
