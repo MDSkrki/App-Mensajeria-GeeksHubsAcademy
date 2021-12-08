@@ -39,3 +39,12 @@ Comprobación del intento de adjuntar imágenes como proceso del desarrollo:
 Después de llegar a este punto, se han hecho varios cambios para organizar mejor la app. En primer lugar, se ha movido el título de la app en el sideBar, para que arriba aparezca el título del canal correspondiente.
 
 También se ha añadido un recuadro para visualizar el contenido donde estarán los mensajes y una barra input con un botón enviar para escribir el mensaje en el recuadro correspondiente. El mensaje lleva color azul para comprobar que aparece de forma correcta.
+
+Adjunto imagen para observar la estructura principal hasta este momento:
+![Estructura principal](img/estructura_principal.png)
+
+Al realizar la captura de pantalla de la estructura principal se encuentra un fallo, la barra inferior de input no se acorta al abrir el sidebar. Adjunto de nuevo imagen:
+![Fallo barra input al abrir sidebar](img/fallo_al_abrir_sidebar.png)
+
+Para areglarlo abro rama _hotfix_ desde _WIP-main-structure_.
+
