@@ -95,16 +95,22 @@ input[type="text"] {
     padding: 1em;
     bottom: 0.5em;
     position: fixed;
+    width: 100%;
 }
 
 .inputField input {
     padding: 0.7em;
     width: 80%;
-    float: bottom;
+    float: bottom inline-start;
 
 }
 
 .inputField button {
     padding: 0.7em;
     width: 5em;
+    float: bottom inline-end;
+}
+
+.messageContainer {
+    color: blue;
 }

@@ -9,4 +9,9 @@ function closeNav() {
     document.getElementById("side_nav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("open_btn").style.display = "inline";
-} 
+}
+
+function writeMessage() {
+    let message = document.getElementById("message_input");
+    document.getElementById("message_container").innerHTML = message.value;
+}
