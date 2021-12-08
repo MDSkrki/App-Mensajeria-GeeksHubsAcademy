@@ -5,12 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Mensajeria Chula</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="main">
+        <header>
+            <h1>  
+                <span class="openbtn" id="open_btn" onclick="openNav()">&#9776;</span>
+                #Channel actual
+                <input id="search" type="search" placeholder="Buscar...">
+            </h1>
+        </header>
+        <!--Creation of a sidebar for group selection-->
+        <!--Groups will be pointed at using <a href> tag-->
+        <div class="sideNav" id="side_nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h2>Somkereki's Message App</h2>
+            <h3>Channels</h3>
+            <a href="#">Channel 1</a>
+            <a href="#">Channel 2</a>
+        </div>
 
-    <div class="sideNav"></div>
+        <div class="mainView" id="mainView">
+            <p>Texto prueba para cuadrar div</p>
+            <div class="messagesView" id="messages_view">
+                <div class="messageContainer" id="message_container"></div>
+                <p>Here we will see messages</p>
+            </div>
+            <div class="inputField" id="input_field">
+                <input type="text" id="message_input">
+                <button type="button" onclick="writeMessage()">Send</button>
+            </div>
+        </div>
 
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,116 @@
+/* This main gives rules for the entire page, the main container */
+#main {
+    transition: margin-left .5s;
+    padding: 2em;
+    display: block;
+    font-family: 'Lato';
+}
+
+header {
+    display: inline;
+}
+
+header #search {
+    float: right;
+    padding: 0.5em;
+}
+
+input[type="text"] {
+    font-family: 'Lato';
+}
+
+/* Sidebar Navigation system */
 .sideNav {
-    background-color: blue;
+    background-color: #366999;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    transition: 0.5s;
+    scroll-behavior: smooth;
+}
+
+.sideNav a {
+    padding: 0.5em 0.5em 0.5em 2em;
+    text-decoration: none;
+    font-size: 1em;
+    color: lightgray;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideNav a:hover {
+    color: white;
+}
+
+.sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0.4em;
+    font-size: 2em;
+    margin-left: 1.3em;
+}
+
+.sideNav h2 {
+    padding: 0.5em 0.5em 0.5em 2em;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sideNav h3 {
+    padding: 0.5em 0.5em 0.5em 2em;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.openbtn {
+    font-size: 0.7em;
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+    padding: 0.4em 0.6em;
+    border: none;
+    display: inline;
+}
+
+.openbtn:hover {
+    background-color: whitesmoke;
+}
+
+/* Organización del contenedor principal de los mensajes */
+.mainView {
+    scroll-behavior: smooth;
+    padding: 2em;
+    border: black;
+    border-radius: 0.2em;
+    border-style: double;
+}
+
+.inputField {
+    padding: 1em;
+    bottom: 0.5em;
+    position: fixed;
+    width: 100%;
+}
+
+.inputField input {
+    padding: 0.7em;
+    width: 80%;
+    float: bottom inline-start;
+
+}
+
+.inputField button {
+    padding: 0.7em;
+    width: 5em;
+    float: bottom inline-end;
+}
+
+.messageContainer {
+    color: blue;
 }
