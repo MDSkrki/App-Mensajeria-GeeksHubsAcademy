@@ -1,7 +1,7 @@
 # Reto-App-Mensajeria
  Reto final Programacion desde Cero GeeksHubs Academy
 
-Objetivos de la app:
+## Objetivos de la app:
 1. Los usuarios pueden crear channels de comunicación
 2. Los usuarios deben poder escribir mensajes en los canales creados
 3. Los canales y las conversaciones tienen que tener histórico scrollable hacia atrás en el tiempo.
@@ -24,7 +24,9 @@ Se valorará:
  - Aplicación de buenas prácticas como reutilización de funciones
  - Adaptación responsive para que se visualice todo correctamentes en todos los dispositivos
 
- Progreso del desarrollo:
+## Funcionalidad
+
+## Progreso del desarrollo:
 
  Rama "develop": servirá para mantener la estructura central de la app, sin llegar a usar la rama main.
 
@@ -33,3 +35,7 @@ Aquí se creará la estructura de la página antes de darle funcionalidad ni dem
 
 Comprobación del intento de adjuntar imágenes como proceso del desarrollo:
 ![Captura pantalla](./img/Progreso_creacion_Sidebar.png)
+
+Después de llegar a este punto, se han hecho varios cambios para organizar mejor la app. En primer lugar, se ha movido el título de la app en el sideBar, para que arriba aparezca el título del canal correspondiente.
+
+También se ha añadido un recuadro para visualizar el contenido donde estarán los mensajes y una barra input con un botón enviar para escribir el mensaje en el recuadro correspondiente. El mensaje lleva color azul para comprobar que aparece de forma correcta.
