@@ -11,6 +11,7 @@ function closeNav() {
     document.getElementById("open_btn").style.display = "inline";
 }
 
+//message creation system
 function writeMessage() {
     let message = document.getElementById("message_input");
     let div = document.createElement("div");
