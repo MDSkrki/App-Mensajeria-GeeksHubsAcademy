@@ -13,5 +13,21 @@ function closeNav() {
 
 function writeMessage() {
     let message = document.getElementById("message_input");
-    document.getElementById("message_container").innerHTML = message.value;
+    let div = document.createElement("div");
+    div.id = 'messageContainer';
+    div.innerHTML = message.value;
+    document.getElementById("messages_view").appendChild(div);
+    message.value = "";
 }
+
+let messageArray = [];
+let channelArray = [];
+
+//eventListener to write divs for messages everytime you press enter from input
+document.getElementById("message_input").addEventListener("keydown", function(event) {
+    if (event.key == "Enter") {
+        writeMessage();
+    }
+})
+
+document.getElementById("send_button"),addEventListener("click", writeMessage());

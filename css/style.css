@@ -95,19 +95,19 @@ input[type="text"] {
     padding: 1em;
     bottom: 0.5em;
     position: fixed;
-    width: 100%;
+    width: 70em;
 }
 
 .inputField input {
     padding: 0.7em;
-    width: 80%;
+    width: 90%;
     float: bottom inline-start;
 
 }
 
 .inputField button {
     padding: 0.7em;
-    width: 5em;
+    width: 5%;
     float: bottom inline-end;
 }
 
