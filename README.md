@@ -48,3 +48,6 @@ Al realizar la captura de pantalla de la estructura principal se encuentra un fa
 
 Para areglarlo abro rama _hotfix_ desde _WIP-main-structure_.
 
+Al no conseguir nada de lo propuesto, se deja para otra ocasión y se hace merge a _WIP-main-structure_ para seguir con el trabajo.
+
+Creamos nueva rama _message-system_ para crear la estructura correcta de los mensajes.
