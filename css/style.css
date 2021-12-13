@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 /* This main gives rules for the entire page, the main container */
 #main {
     transition: margin-left .5s;
@@ -89,20 +93,20 @@ input[type="text"] {
     border: black;
     border-radius: 0.2em;
     border-style: double;
+    bottom: 0;
+    position: relative;
 }
 
 .inputField {
     padding: 1em;
-    bottom: 0.5em;
-    position: fixed;
-    width: 70em;
+    margin-bottom: 0.5em;
+    width: 100%;
 }
 
 .inputField input {
     padding: 0.7em;
     width: 90%;
     float: bottom inline-start;
-
 }
 
 .inputField button {

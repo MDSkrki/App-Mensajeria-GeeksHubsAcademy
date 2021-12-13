@@ -31,4 +31,3 @@ document.getElementById("message_input").addEventListener("keydown", function(ev
     }
 })
 
-document.getElementById("send_button"),addEventListener("click", writeMessage());
