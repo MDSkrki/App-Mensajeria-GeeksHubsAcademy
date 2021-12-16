@@ -18,7 +18,9 @@ const writeMessage = () => {
     div.id = 'messageContainer';
     div.innerHTML = message.value;
     document.getElementById("messages_view").appendChild(div);
+    messageArray.push(message.value);
     message.value = "";
+    console.log(messageArray);
 }
 
 let messageArray = [];
@@ -30,3 +32,21 @@ document.getElementById("message_input").addEventListener("keydown", function(ev
         writeMessage();
     }
 })
+
+const inputCreator = () => {
+    let div = document.createElement("div");
+    div.id = "temporal_input"
+    div.innerHTML = "<input type='text' id='new_input'> <input type='submit'>"
+}
+
+const channelCreator = () => {
+    let a = document.createElement("a");
+    a.href = "#"
+    a.innerHTML = "Channel name"; //We need to insert from inputCreator()
+    document.getElementById("side_nav").appendChild(a);
+}
+
+const channelDestructor = (id) => {
+    let elem = document.getElementById(id);
+    return elem.parentNode.removeChild(elem);
+}
