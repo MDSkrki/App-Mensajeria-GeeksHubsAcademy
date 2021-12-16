@@ -45,8 +45,3 @@ const channelCreator = () => {
     a.innerHTML = "Channel name"; //We need to insert from inputCreator()
     document.getElementById("side_nav").appendChild(a);
 }
-
-const channelDestructor = (id) => {
-    let elem = document.getElementById(id);
-    return elem.parentNode.removeChild(elem);
-}
