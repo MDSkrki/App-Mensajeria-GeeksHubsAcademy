@@ -12,6 +12,10 @@ const closeNav = () => {
 }
 
 //message creation system
+
+let messageArray = [];
+let channelArray = [];
+
 const writeMessage = () => {
     let message = document.getElementById("message_input");
     let div = document.createElement("div");
@@ -20,11 +24,7 @@ const writeMessage = () => {
     document.getElementById("messages_view").appendChild(div);
     messageArray.push(message.value);
     message.value = "";
-    console.log(messageArray);
 }
-
-let messageArray = [];
-let channelArray = [];
 
 //eventListener to write divs for messages everytime you press enter from input
 document.getElementById("message_input").addEventListener("keydown", function(event) {
@@ -33,6 +33,7 @@ document.getElementById("message_input").addEventListener("keydown", function(ev
     }
 })
 
+// crear input para dar nombre al canal que se nombra
 const inputCreator = () => {
     let div = document.createElement("div");
     div.id = "temporal_input"
