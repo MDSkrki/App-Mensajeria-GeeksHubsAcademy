@@ -15,6 +15,7 @@ const closeNav = () => {
 
 let messageArray = [];
 let channelArray = [];
+let channelName = "Testname";
 
 const writeMessage = () => {
     let input = document.getElementById("message_input");
@@ -42,8 +43,25 @@ const inputCreator = () => {
 }
 
 const channelCreator = () => {
-    let a = document.createElement("a");
-    a.href = "#"
-    a.innerHTML = "Channel name"; //We need to insert from inputCreator()
-    document.getElementById("side_nav").appendChild(a);
+    createInput();
+    document.getElementById("channelInput").addEventListener("keydown", function(event) {
+        if (event.key == "Enter") {
+            channelName = document.getElementById("channelInput").value + '!';
+            let a = document.createElement("a");
+            a.href = "#"
+            a.innerHTML = channelName; //We need to insert from inputCreator()
+            document.getElementById("side_nav").appendChild(a);
+            channelArray.push(a.innerHTML);
+            document.getElementById("channelInput").parentNode.remove();
+        }
+    });
 }
+
+console.log(channelArray);
+
+const createInput = () => {
+    let div = document.createElement("div");
+    div.innerHTML = "<input type='text' id='channelInput'>";
+    document.getElementById("side_nav").appendChild(div);
+}
+
