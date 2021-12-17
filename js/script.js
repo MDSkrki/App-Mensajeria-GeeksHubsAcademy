@@ -17,15 +17,14 @@ let messageArray = [];
 let channelArray = [];
 
 const writeMessage = () => {
-    let message = document.getElementById("message_input");
+    let input = document.getElementById("message_input");
     let messageDiv = document.createElement("span");
-    let dateSpan = document.createElement("span");
     let date = new Date();
     messageDiv.id = 'messageContainer';
-    messageDiv.innerHTML = message.value + '</br>' + date.getHours() + 'h ' + date.getMinutes() + 'm ' +date.getSeconds() + 's </br>';
+    messageDiv.innerHTML = input.value + '</br>' + date.getHours() + 'h ' + date.getMinutes() + 'm ' +date.getSeconds() + 's </br>';
     document.getElementById("messages_view").appendChild(messageDiv);
-    messageArray.push(message.value);
-    message.value = "";
+    messageArray.push(input.value);
+    input.value = "";
 }
 
 //eventListener to write divs for messages everytime you press enter from input
