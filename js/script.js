@@ -15,7 +15,6 @@ const closeNav = () => {
 
 let messageArray = [];
 let channelArray = [];
-let channelName = "Testname";
 
 const writeMessage = () => {
     let input = document.getElementById("message_input");
@@ -38,19 +37,24 @@ document.getElementById("message_input").addEventListener("keydown", function(ev
 // crear input para dar nombre al canal que se nombra
 const inputCreator = () => {
     let div = document.createElement("div");
-    div.id = "temporal_input"
-    div.innerHTML = "<input type='text' id='new_input'> <input type='submit'>"
+    div.innerHTML = "<input type='text' id='new_input'> <input type='submit'>";
 }
 
 const channelCreator = () => {
     createInput();
     document.getElementById("channelInput").addEventListener("keydown", function(event) {
         if (event.key == "Enter") {
-            channelName = document.getElementById("channelInput").value + '!';
+            let channelName = document.getElementById("channelInput").value + '!';
+            let div = document.createElement("div");
             let a = document.createElement("a");
-            a.href = "#"
-            a.innerHTML = channelName; //We need to insert from inputCreator()
-            document.getElementById("side_nav").appendChild(a);
+            let button = document.createElement("button");
+            button.innerHTML = "&minus;";
+            //I have to make the button do something
+            a.href = "#";
+            a.innerHTML = channelName;
+            div.appendChild(a);
+            div.appendChild(button);
+            document.getElementById("side_nav").appendChild(div);
             channelArray.push(a.innerHTML);
             document.getElementById("channelInput").parentNode.remove();
         }
@@ -64,4 +68,3 @@ const createInput = () => {
     div.innerHTML = "<input type='text' id='channelInput'>";
     document.getElementById("side_nav").appendChild(div);
 }
-
