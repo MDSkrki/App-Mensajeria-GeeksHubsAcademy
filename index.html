@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Mensajeria Chula</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <base> 
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,8 +24,10 @@
         <div class="sideNav" id="side_nav">
             <a href="javascript:void(0)" id="close_btn" class="closebtn" onclick="closeNav()">&times;</a>
             <h2>Somkereki's Message App</h2>
-            <h3>Channels</h3>
-            <button id="new_channel_btn" class="newChannelButton" onclick="channelCreator()">Añadir canal</button>
+            <span id="h3_span" class="h3Span">
+                <h3>Channels</h3>
+                <button id="new_channel_btn" class="newChannelButton" onclick="channelCreator()">Añadir canal</button>
+            </span>
         </div>
 
         <div class="mainView" id="mainView">
@@ -32,7 +35,7 @@
             </div>
         </div>
         <div class="inputField" id="input_field">
-            <input type="text" id="message_input">
+            <input type="text" id="message_input" value="">
             <button id="send_button" type="button" onclick="writeMessage()">Send</button>
         </div>
 
