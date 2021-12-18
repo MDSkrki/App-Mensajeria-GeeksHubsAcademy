@@ -40,6 +40,7 @@ const channelCreator = () => {
     let div = document.createElement("div");
     div.innerHTML = "<input type='text' id='channelInput'>";
     document.getElementById("side_nav").appendChild(div);
+    document.getElementById("channelInput").focus();
     //create channel after pressing 'Enter'
     document.getElementById("channelInput").addEventListener("keydown", function(event) {
         if (event.key == "Enter") {
@@ -59,6 +60,7 @@ const channelCreator = () => {
                 document.getElementById("side_nav").appendChild(div);
                 channelArray.push(a.innerHTML);
                 document.getElementById("channelInput").parentNode.remove();
+
             } else {
                 document.getElementById("channelInput").parentNode.remove();
             }
