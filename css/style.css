@@ -89,11 +89,19 @@ input[type="text"] {
 /* Organización del contenedor principal de los mensajes */
 .mainView {
     scroll-behavior: smooth;
-    padding: 2em;
     border: black;
     border-radius: 0.2em;
     border-style: double;
     position: relative;
+}
+
+.messagesView {
+    padding: 2em;
+    overflow: none;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    max-height: 20em;
+    box-sizing: border-box;
 }
 
 .inputField {

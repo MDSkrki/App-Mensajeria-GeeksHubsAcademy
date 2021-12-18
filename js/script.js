@@ -36,7 +36,11 @@ document.getElementById("message_input").addEventListener("keydown", function(ev
 
 // crear input para dar nombre al canal que se nombra
 const channelCreator = () => {
-    createInput();
+    //create Input
+    let div = document.createElement("div");
+    div.innerHTML = "<input type='text' id='channelInput'>";
+    document.getElementById("side_nav").appendChild(div);
+    //create channel after pressing 'Enter'
     document.getElementById("channelInput").addEventListener("keydown", function(event) {
         if (event.key == "Enter") {
             if(document.getElementById("channelInput").value.length >= 1) {
@@ -47,9 +51,9 @@ const channelCreator = () => {
                 let button = document.createElement("button");
                 button.innerHTML = "&minus;";
                 button.onclick = "channelDestructor()";
-                //I have to make the button do something
+                //I have to make the button actually remove its associated channel
                 a.href = "#";
-                a.innerHTML = channelName;
+                a.innerHTML = '#' + channelName;
                 div.appendChild(a);
                 div.appendChild(button);
                 document.getElementById("side_nav").appendChild(div);
@@ -63,12 +67,7 @@ const channelCreator = () => {
 }
 
 console.log(channelArray);
-
-const createInput = () => {
-    let div = document.createElement("div");
-    div.innerHTML = "<input type='text' id='channelInput'>";
-    document.getElementById("side_nav").appendChild(div);
-}
+console.log(messageArray);
 
 // I don't understand why this doesn't work yet
 const channelDestructor = () => {
