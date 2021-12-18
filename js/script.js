@@ -35,28 +35,28 @@ document.getElementById("message_input").addEventListener("keydown", function(ev
 })
 
 // crear input para dar nombre al canal que se nombra
-const inputCreator = () => {
-    let div = document.createElement("div");
-    div.innerHTML = "<input type='text' id='new_input'> <input type='submit'>";
-}
-
 const channelCreator = () => {
     createInput();
     document.getElementById("channelInput").addEventListener("keydown", function(event) {
         if (event.key == "Enter") {
-            let channelName = document.getElementById("channelInput").value + '!';
-            let div = document.createElement("div");
-            let a = document.createElement("a");
-            let button = document.createElement("button");
-            button.innerHTML = "&minus;";
-            //I have to make the button do something
-            a.href = "#";
-            a.innerHTML = channelName;
-            div.appendChild(a);
-            div.appendChild(button);
-            document.getElementById("side_nav").appendChild(div);
-            channelArray.push(a.innerHTML);
-            document.getElementById("channelInput").parentNode.remove();
+            if(document.getElementById("channelInput").value.length >= 1) {
+                let channelName = document.getElementById("channelInput").value;
+                let div = document.createElement("div");
+                let a = document.createElement("a");
+                let button = document.createElement("button");
+                button.innerHTML = "&minus;";
+                button.onclick = "channelDestructor()";
+                //I have to make the button do something
+                a.href = "#";
+                a.innerHTML = channelName;
+                div.appendChild(a);
+                div.appendChild(button);
+                document.getElementById("side_nav").appendChild(div);
+                channelArray.push(a.innerHTML);
+                document.getElementById("channelInput").parentNode.remove();
+            } else {
+                document.getElementById("channelInput").parentNode.remove();
+            }
         }
     });
 }
@@ -67,4 +67,14 @@ const createInput = () => {
     let div = document.createElement("div");
     div.innerHTML = "<input type='text' id='channelInput'>";
     document.getElementById("side_nav").appendChild(div);
+}
+
+// I don't understand why this doesn't work yet
+const channelDestructor = () => {
+    let div = document.getElementById("channelInput").parentNode;
+    let channelName = div.getElementsByTagName("a").value;
+    let i = channelArray.indexOf(channelName);
+    channelArray.splice(i,1);
+    div.remove();
+    console.log("This appears to be executed");
 }
