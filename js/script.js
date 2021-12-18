@@ -42,6 +42,7 @@ const channelCreator = () => {
             if(document.getElementById("channelInput").value.length >= 1) {
                 let channelName = document.getElementById("channelInput").value;
                 let div = document.createElement("div");
+                div.id = "channelName";
                 let a = document.createElement("a");
                 let button = document.createElement("button");
                 button.innerHTML = "&minus;";
@@ -71,10 +72,11 @@ const createInput = () => {
 
 // I don't understand why this doesn't work yet
 const channelDestructor = () => {
-    let div = document.getElementById("channelInput").parentNode;
+    let div = document.getElementById("channelName");
     let channelName = div.getElementsByTagName("a").value;
     let i = channelArray.indexOf(channelName);
     channelArray.splice(i,1);
     div.remove();
     console.log("This appears to be executed");
 }
+
