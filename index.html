@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Mensajeria Chula</title>
+    <title>Somkereki's Message App</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
     <link rel="stylesheet" href="css/style.css">
@@ -25,8 +25,11 @@
             <h2>Somkereki's Message App</h2>
             <h3>
                 Channels
-                <button id="new_channel_btn" class="newChannelButton" onclick="channelCreator()">Añadir canal</button>
             </h3>
+            <div id="channel_buttons" class="channelButtons">
+                <button id="channelCreator" onclick="channelCreator()">Añadir canal</button>
+                <button id="channelDestructor" onclick="channelDestructor()">Eliminar canal</button>
+            </div>
             
         </div>
 

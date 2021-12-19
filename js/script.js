@@ -56,14 +56,10 @@ const channelCreator = () => {
                 let div = document.createElement("div");
                 div.id = "channelName";
                 let a = document.createElement("a");
-                let button = document.createElement("button");
-                button.innerHTML = "&minus;";
-                button.setAttribute("onclick", "channelDestructor()");
                 //I have to make the button actually remove its associated channel
                 a.href = "#";
                 a.innerHTML = '#' + channelName;
                 div.appendChild(a);
-                div.appendChild(button);
                 side_nav.appendChild(div);
                 channelArray.push(a.innerHTML);
                 channelInput.parentNode.remove();

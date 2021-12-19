@@ -125,8 +125,9 @@ input[type="text"] {
     float: bottom inline-end;
 }
 
-.newChannelButton {
-    padding: 0.2em;
-    float: inline-end;
-    margin: 0.5em;
+.channelButtons {
+    align-items: stretch;
+    width: 100%;
+    padding: 0.5em;
+    margin-left: 0.5em;
 }
