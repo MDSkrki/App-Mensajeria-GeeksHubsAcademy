@@ -100,7 +100,7 @@ input[type="text"] {
     overflow: none;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    max-height: 20em;
+    height: 20em;
     box-sizing: border-box;
 }
 
