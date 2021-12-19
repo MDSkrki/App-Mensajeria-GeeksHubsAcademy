@@ -58,7 +58,7 @@ const channelCreator = () => {
                 let a = document.createElement("a");
                 let button = document.createElement("button");
                 button.innerHTML = "&minus;";
-                button.onclick = "channelDestructor()";
+                button.setAttribute("onclick", "channelDestructor()");
                 //I have to make the button actually remove its associated channel
                 a.href = "#";
                 a.innerHTML = '#' + channelName;
@@ -83,7 +83,7 @@ const channelDestructor = () => {
     let name = channelName.getElementsByTagName("a").value;
     let i = channelArray.indexOf(name);
     channelArray.splice(i,1);
-    div.remove();
+    channelName.remove();
     console.log("This appears to be executed");
 }
 
