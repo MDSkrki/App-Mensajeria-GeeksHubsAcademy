@@ -39,20 +39,23 @@ message_input.addEventListener("keydown", function(event) {
     }
 })
 
-
-const channelCreator = () => {
-    // create input to name the channel
+const channelInputCreator = () => {
     let div = document.createElement("div");
     div.innerHTML = "<input type='text' id='channelInput'>";
     side_nav.appendChild(div);
     let channelInput = document.getElementById("channelInput");
     channelInput.focus();
+} 
+
+const channelCreator = () => {
+    // create input to name the channel
+    channelInputCreator();
     //create channel after pressing 'Enter'
     channelInput.addEventListener("keydown", e => {
         if (e.key == "Enter") {
             if(channelInput.value.length >= 1) {
                 let channelName = channelInput.value;
-                let div = document.createElement("div");
+                let div = document.createElement("span");
                 div.id = "channel";
                 let a = document.createElement("a");
                 let button = document.createElement("button");
@@ -64,7 +67,7 @@ const channelCreator = () => {
                 div.appendChild(a);
                 div.appendChild(button);
                 side_nav.appendChild(div);
-                //Why is this not adding properly to the array??
+                //Why is this not pushing properly to the array??
                 channelArray.push(div);
                 channelInput.parentNode.remove();
             } else {
@@ -74,13 +77,12 @@ const channelCreator = () => {
     });
 }
 
-console.log(channelArray);
-console.log(messageArray);
-
 // I don't understand why this doesn't work yet
 const channelDestructor = () => {
-    let channelName = document.getElementById("channel");
+    let channel = document.getElementById("channel");
     channelArray.pop();
-    side_nav.removeChild(channelName);
+    side_nav.removeChild(channel);
 }
 
+console.log(channelArray);
+console.log(messageArray);
