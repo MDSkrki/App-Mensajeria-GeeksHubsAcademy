@@ -5,6 +5,7 @@ let open_btn = document.getElementById("open_btn");
 let messages_view = document.getElementById("messages_view");
 let message_input = document.getElementById("message_input");
 let searchInput = document.getElementById("search");
+let title = document.getElementById("title");
 
 // Sidebar Navigation Open-Collapse System
 const toggleSideBar = () => {
@@ -18,6 +19,9 @@ const toggleSideBar = () => {
         side_nav.state = "closed";
     }
 }
+
+//Channel control system
+title.innerHTML = "#Default channel";
 
 //message creation system
 let messageArray = [];
@@ -64,18 +68,29 @@ const channelCreator = () => {
                 let div = document.createElement("div");
                 div.id = "channel";
                 let a = document.createElement("a");
-                //let button = document.createElement("button");
-                //button.innerHTML = "Eliminar";
+                let button = document.createElement("button");
+                button.innerHTML = "Eliminar";
                 //button.setAttribute("onclick", "channelDestructor()");
                 //I have to make the button actually remove its associated channel
                 a.href = "#";
                 a.innerHTML = '#' + channelName;
                 div.appendChild(a);
-                //div.appendChild(button);
+                div.appendChild(button);
                 side_nav.appendChild(div);
                 //Why is this not pushing properly to the array??
                 channelArray.push(div);
                 channelInput.parentNode.remove();
+                button.addEventListener("click", () => {
+                    for (let i=0;i<channelArray.length;i++) {
+                        if (channelArray[i] == button.parentNode) {
+                            channelArray.splice(i,1);
+                            button.parentNode.remove();
+                        } else {
+                            console.log("oops something went wrong");
+                        }
+                    } 
+                    
+                })
             } else {
                 channelInput.parentNode.remove();
             }
@@ -84,12 +99,18 @@ const channelCreator = () => {
 }
 
 // I don't understand why this doesn't work yet, but i'll set it aside until i can figure out what is happening
-const channelDestructor = () => {
+/*const channelDestructor = () => {
     let channel = document.getElementById("channel");
+    let button = 
+    for (let i=0;i<channelArray.length;i++) {
+        if (channelArray[i].includes(button)) {
+
+        }
+    }
     channelArray.pop();
     side_nav.removeChild(channel);
 }
-
+*/
 const searchMessages = () => {
     let search = searchInput.value;
     let array = document.getElementsByTagName("span");

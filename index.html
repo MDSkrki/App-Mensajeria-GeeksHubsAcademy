@@ -14,19 +14,22 @@
         <header>
             <h1>  
                 <div class="openbtn" id="open_btn" onclick="toggleSideBar()">&#9776;</div>
-                #Channel actual
+                <div id="title"></div>
                 <input id="search" type="search" class="search" onkeyup="searchMessages()" placeholder="Buscar mensajes...">
             </h1>
         </header>
         <!--Creation of a sidebar for group selection-->
         <!--Groups will be pointed at using <a href> tag-->
         <div class="sideNav" id="side_nav" state="closed">
-            <a href="javascript:void(0)" id="close_btn" class="closebtn" onclick="toggleSideBar()">&times;</a>
+            <a href="#" id="close_btn" class="closebtn" onclick="toggleSideBar()">&times;</a>
             <h2>Somkereki's Message App</h2>
             <h3>
                 Channels
                 <button id="new_channel_btn" class="newChannelButton" onclick="channelCreator()">Añadir canal</button>
             </h3>
+            <div id="channel">
+                <a href="#" id="channel_name">#Default channel</a>
+            </div>
             
         </div>
 

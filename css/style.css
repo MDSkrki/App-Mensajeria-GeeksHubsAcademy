@@ -20,6 +20,11 @@ header #search {
     padding: 0.5em;
 }
 
+header h1 {
+    display: flex;
+    justify-content: space-between;
+}
+
 input[type="text"] {
     font-family: 'Lato';
 }
@@ -86,12 +91,6 @@ input[type="text"] {
     background-color: whitesmoke;
 }
 
-.search {
-    width: 20%;
-    -webkit-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
-}
-
 /* Main message container */
 .mainView {
     scroll-behavior: smooth;
@@ -108,7 +107,7 @@ input[type="text"] {
     scroll-behavior: smooth;
     height: 20em;
     box-sizing: border-box;
-    
+    border-style: groove;
 }
 
 .messagesView #messages_span {
