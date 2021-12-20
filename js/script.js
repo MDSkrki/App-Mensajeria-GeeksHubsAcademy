@@ -19,7 +19,6 @@ const closeNav = () => {
 }
 
 //message creation system
-
 let messageArray = [];
 let channelArray = [];
 
@@ -29,7 +28,7 @@ const writeMessage = () => {
     span.id = 'messageContainer';
     span.innerHTML = message_input.value + '</br>' + date.getHours() + 'h ' + date.getMinutes() + 'm ' +date.getSeconds() + 's </br>';
     messages_view.appendChild(span);
-    messageArray.push(message_input.value);
+    messageArray.push(span);
     message_input.value = "";
 }
 
@@ -40,9 +39,9 @@ message_input.addEventListener("keydown", function(event) {
     }
 })
 
-// crear input para dar nombre al canal que se nombra
+
 const channelCreator = () => {
-    //create Input
+    // create input to name the channel
     let div = document.createElement("div");
     div.innerHTML = "<input type='text' id='channelInput'>";
     side_nav.appendChild(div);
@@ -54,14 +53,19 @@ const channelCreator = () => {
             if(channelInput.value.length >= 1) {
                 let channelName = channelInput.value;
                 let div = document.createElement("div");
-                div.id = "channelName";
+                div.id = "channel";
                 let a = document.createElement("a");
+                let button = document.createElement("button");
+                button.innerHTML = "Eliminar";
+                button.setAttribute("onclick", "channelDestructor()");
                 //I have to make the button actually remove its associated channel
                 a.href = "#";
                 a.innerHTML = '#' + channelName;
                 div.appendChild(a);
+                div.appendChild(button);
                 side_nav.appendChild(div);
-                channelArray.push(a.innerHTML);
+                //Why is this not adding properly to the array??
+                channelArray.push(div);
                 channelInput.parentNode.remove();
             } else {
                 channelInput.parentNode.remove();
@@ -75,11 +79,8 @@ console.log(messageArray);
 
 // I don't understand why this doesn't work yet
 const channelDestructor = () => {
-    let channelName = document.getElementById("channelName");
-    let name = channelName.getElementsByTagName("a").value;
-    let i = channelArray.indexOf(name);
-    channelArray.splice(i,1);
-    channelName.remove();
-    console.log("This appears to be executed");
+    let channelName = document.getElementById("channel");
+    channelArray.pop();
+    side_nav.removeChild(channelName);
 }
 

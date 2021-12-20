@@ -86,7 +86,7 @@ input[type="text"] {
     background-color: whitesmoke;
 }
 
-/* Organización del contenedor principal de los mensajes */
+/* Main message container */
 .mainView {
     scroll-behavior: smooth;
     border: black;
