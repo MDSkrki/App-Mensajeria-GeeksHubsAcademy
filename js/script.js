@@ -6,16 +6,16 @@ let messages_view = document.getElementById("messages_view");
 let message_input = document.getElementById("message_input");
 
 // Sidebar Navigation Open-Collapse System
-const openNav = () => {
-    side_nav.style.width = "18em";
-    main.style.marginLeft = "18em";
-    open_btn.style.display = "none";
-}
-
-const closeNav = () => {
-    side_nav.style.width = "0";
-    main.style.marginLeft = "0";
-    open_btn.style.display = "inline";
+const toggleSideBar = () => {
+    if (side_nav.state == "closed") {
+        side_nav.style.width = "18em";
+        main.style.marginLeft = "18em";
+        side_nav.state = "opened";
+    } else {
+        side_nav.style.width = "0";
+        main.style.marginLeft = "0";
+        side_nav.state = "closed";
+    }
 }
 
 //message creation system
@@ -55,17 +55,17 @@ const channelCreator = () => {
         if (e.key == "Enter") {
             if(channelInput.value.length >= 1) {
                 let channelName = channelInput.value;
-                let div = document.createElement("span");
+                let div = document.createElement("div");
                 div.id = "channel";
                 let a = document.createElement("a");
-                let button = document.createElement("button");
-                button.innerHTML = "Eliminar";
-                button.setAttribute("onclick", "channelDestructor()");
+                //let button = document.createElement("button");
+                //button.innerHTML = "Eliminar";
+                //button.setAttribute("onclick", "channelDestructor()");
                 //I have to make the button actually remove its associated channel
                 a.href = "#";
                 a.innerHTML = '#' + channelName;
                 div.appendChild(a);
-                div.appendChild(button);
+                //div.appendChild(button);
                 side_nav.appendChild(div);
                 //Why is this not pushing properly to the array??
                 channelArray.push(div);
@@ -77,7 +77,7 @@ const channelCreator = () => {
     });
 }
 
-// I don't understand why this doesn't work yet
+// I don't understand why this doesn't work yet, but i'll set it aside until i can figure out what is happening
 const channelDestructor = () => {
     let channel = document.getElementById("channel");
     channelArray.pop();
