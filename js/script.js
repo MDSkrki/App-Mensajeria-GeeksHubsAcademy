@@ -98,19 +98,6 @@ const channelCreator = () => {
     });
 }
 
-// I don't understand why this doesn't work yet, but i'll set it aside until i can figure out what is happening
-/*const channelDestructor = () => {
-    let channel = document.getElementById("channel");
-    let button = 
-    for (let i=0;i<channelArray.length;i++) {
-        if (channelArray[i].includes(button)) {
-
-        }
-    }
-    channelArray.pop();
-    side_nav.removeChild(channel);
-}
-*/
 const searchMessages = () => {
     let search = searchInput.value;
     let array = document.getElementsByTagName("span");
