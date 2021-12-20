@@ -4,6 +4,7 @@ let main = document.getElementById("main");
 let open_btn = document.getElementById("open_btn");
 let messages_view = document.getElementById("messages_view");
 let message_input = document.getElementById("message_input");
+let searchInput = document.getElementById("search");
 
 // Sidebar Navigation Open-Collapse System
 const toggleSideBar = () => {
@@ -28,6 +29,7 @@ const writeMessage = () => {
     span.id = 'messageContainer';
     span.innerHTML = message_input.value + '</br>' + date.getHours() + 'h ' + date.getMinutes() + 'm ' +date.getSeconds() + 's </br>';
     messages_view.appendChild(span);
+    messages_view.scrollTop = messages_view.scrollHeight;
     messageArray.push(span);
     message_input.value = "";
 }
@@ -82,6 +84,18 @@ const channelDestructor = () => {
     let channel = document.getElementById("channel");
     channelArray.pop();
     side_nav.removeChild(channel);
+}
+
+const searchMessages = () => {
+    let search = searchInput.value;
+    let array = document.getElementsByTagName("span");
+    for (let i=0; i<array.length;i++) {
+        if(!array[i].innerHTML.toLowerCase().includes(search)) {
+            array[i].style.display = "none";
+        } else {
+            array[i].style.display = "block";
+        }
+    }
 }
 
 console.log(channelArray);
