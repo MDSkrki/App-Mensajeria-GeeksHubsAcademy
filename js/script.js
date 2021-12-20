@@ -25,10 +25,14 @@ let channelArray = [];
 
 const writeMessage = () => {
     let span = document.createElement("span");
+    span.id = "messages_span";
     let date = new Date();
-    span.id = 'messageContainer';
-    span.innerHTML = message_input.value + '</br>' + date.getHours() + 'h ' + date.getMinutes() + 'm ' +date.getSeconds() + 's </br>';
+    let dateSpan = document.createElement("span");
+    dateSpan.id = "date_span";
+    dateSpan.innerHTML = date.getDate() + '/' + date.getMonth() + '/' +  date.getFullYear() + ' ' + date.getHours() + 'h ' + date.getMinutes() + 'm ' +date.getSeconds() + 's </br>';
+    span.innerHTML = message_input.value;
     messages_view.appendChild(span);
+    messages_view.appendChild(dateSpan);
     messages_view.scrollTop = messages_view.scrollHeight;
     messageArray.push(span);
     message_input.value = "";

@@ -102,12 +102,30 @@ input[type="text"] {
 }
 
 .messagesView {
+    width: 100%;
     padding: 2em;
-    overflow: visible;
     overflow-y: scroll;
     scroll-behavior: smooth;
     height: 20em;
     box-sizing: border-box;
+    
+}
+
+.messagesView #messages_span {
+    width: 83%;
+    padding-right: 1em;
+    height:max-content;
+    scroll-padding-right: 1em;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+.messagesView #date_span {
+    display: inline-block;
+    text-align: right;
+    color: gray;
 }
 
 .inputField {
