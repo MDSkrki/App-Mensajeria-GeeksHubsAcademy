@@ -110,6 +110,12 @@ input[type="text"] {
     border-style: groove;
 }
 
+.messagesView .messageDiv {
+    width: 100%;
+    border-style: dotted;
+    display: block;
+}
+
 .messagesView #messages_span {
     width: 83%;
     padding-right: 1em;
@@ -132,7 +138,6 @@ input[type="text"] {
     margin-bottom: 0.5em;
     width: 100%;
     z-index: 1;
-    position: relative;
 }
 
 .inputField input {

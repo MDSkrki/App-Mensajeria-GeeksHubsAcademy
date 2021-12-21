@@ -6,6 +6,8 @@ let messages_view = document.getElementById("messages_view");
 let message_input = document.getElementById("message_input");
 let searchInput = document.getElementById("search");
 let title = document.getElementById("title");
+let selectedChannel = "#default channel";
+
 
 // Sidebar Navigation Open-Collapse System
 const toggleSideBar = () => {
@@ -21,13 +23,17 @@ const toggleSideBar = () => {
 }
 
 //Channel control system
-title.innerHTML = "#Default channel";
+title.innerHTML = selectedChannel;
+
 
 //message creation system
 let messageArray = [];
 let channelArray = [];
 
 const writeMessage = () => {
+    let div = document.createElement("div");
+    div.id = "messageDiv";
+    //div.setAttribute("style", "width: 100%;border-style: dotted;display: block;");
     let span = document.createElement("span");
     span.id = "messages_span";
     let date = new Date();
@@ -35,10 +41,16 @@ const writeMessage = () => {
     dateSpan.id = "date_span";
     dateSpan.innerHTML = date.getDate() + '/' + date.getMonth() + '/' +  date.getFullYear() + ' ' + date.getHours() + 'h ' + date.getMinutes() + 'm ' +date.getSeconds() + 's </br>';
     span.innerHTML = message_input.value;
-    messages_view.appendChild(span);
-    messages_view.appendChild(dateSpan);
+    //create new message object to push to array
+    let message = new Object();
+    message.value = message_input.value;
+    message.date = dateSpan.innerHTML;
+    message.channel = selectedChannel;
+    messages_view.appendChild(div);
+    div.appendChild(span);
+    div.appendChild(dateSpan);
     messages_view.scrollTop = messages_view.scrollHeight;
-    messageArray.push(span);
+    messageArray.push(message);
     message_input.value = "";
 }
 
@@ -67,6 +79,7 @@ const channelCreator = () => {
                 let channelName = channelInput.value;
                 let div = document.createElement("div");
                 div.id = "channel";
+                div.class = "channel";
                 let a = document.createElement("a");
                 let button = document.createElement("button");
                 button.innerHTML = "Eliminar";
@@ -90,7 +103,28 @@ const channelCreator = () => {
                         }
                     } 
                     
-                })
+                });
+                a.addEventListener("click", () => {
+                    let messageDiv = document.getElementById("messageDiv");
+                    for(let i=0;i<channelArray.length;i++) {
+                        if(channelArray[i] == a.parentNode) {
+                            selectedChannel = a.innerHTML;
+                            title.innerHTML = selectedChannel;
+                            /*for (let j=0;j<messageArray.length;j++) {
+                                if (messageArray[j].channel == selectedChannel) {
+                                    messageDiv.style.display = "block";
+                                } else if (!messageArray[j].channel == selectedChannel) {
+                                    messageDiv.style.display = "none";
+                                    console.log("Does this bad boy get executed?");
+                                } else {
+                                    console.log("This really shouldnt reach the console");
+                                }
+                            }*/
+                        } else {
+                            console.log('What is this code??');
+                        }
+                    }
+                });
             } else {
                 channelInput.parentNode.remove();
             }
