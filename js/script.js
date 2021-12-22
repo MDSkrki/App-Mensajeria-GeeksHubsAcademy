@@ -33,6 +33,7 @@ let channelArray = [];
 const writeMessage = () => {
     let div = document.createElement("div");
     div.id = "messageDiv";
+    div.class = "messageDiv";
     //div.setAttribute("style", "width: 100%;border-style: dotted;display: block;");
     let span = document.createElement("span");
     span.id = "messages_span";
@@ -83,7 +84,6 @@ const channelCreator = () => {
                 let a = document.createElement("a");
                 let button = document.createElement("button");
                 button.innerHTML = "Eliminar";
-                //button.setAttribute("onclick", "channelDestructor()");
                 //I have to make the button actually remove its associated channel
                 a.href = "#";
                 a.innerHTML = '#' + channelName;
@@ -93,6 +93,7 @@ const channelCreator = () => {
                 //Why is this not pushing properly to the array??
                 channelArray.push(div);
                 channelInput.parentNode.remove();
+                //channel remove listener
                 button.addEventListener("click", () => {
                     for (let i=0;i<channelArray.length;i++) {
                         if (channelArray[i] == button.parentNode) {
@@ -104,24 +105,22 @@ const channelCreator = () => {
                     } 
                     
                 });
+                //channel select listener
                 a.addEventListener("click", () => {
-                    let messageDiv = document.getElementById("messageDiv");
+                    let displayedMessages = messages_view.getElementsByTagName("div");
+                    console.log(displayedMessages);
                     for(let i=0;i<channelArray.length;i++) {
                         if(channelArray[i] == a.parentNode) {
                             selectedChannel = a.innerHTML;
                             title.innerHTML = selectedChannel;
-                            /*for (let j=0;j<messageArray.length;j++) {
+                            for (let j=0;j<messageArray.length;j++) {
                                 if (messageArray[j].channel == selectedChannel) {
-                                    messageDiv.style.display = "block";
-                                } else if (!messageArray[j].channel == selectedChannel) {
-                                    messageDiv.style.display = "none";
-                                    console.log("Does this bad boy get executed?");
+                                    displayedMessages[j].style.display = "block";
                                 } else {
-                                    console.log("This really shouldnt reach the console");
+                                    displayedMessages[j].style.display = "none";
+                                    console.log("Haha i hid a message");
                                 }
-                            }*/
-                        } else {
-                            console.log('What is this code??');
+                            }
                         }
                     }
                 });
@@ -134,12 +133,12 @@ const channelCreator = () => {
 
 const searchMessages = () => {
     let search = searchInput.value;
-    let array = document.getElementsByTagName("span");
-    for (let i=0; i<array.length;i++) {
-        if(!array[i].innerHTML.toLowerCase().includes(search)) {
-            array[i].style.display = "none";
+    let displayedMessages = messages_view.getElementsByTagName("div");
+    for (let i=0; i<messageArray.length;i++) {
+        if(messageArray[i].value.toLowerCase().includes(search)) {
+            displayedMessages[i].style.display = "block";
         } else {
-            array[i].style.display = "block";
+            displayedMessages[i].style.display = "none";
         }
     }
 }
