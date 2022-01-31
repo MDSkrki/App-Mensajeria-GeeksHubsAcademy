@@ -84,13 +84,11 @@ const channelCreator = () => {
                 let a = document.createElement("a");
                 let button = document.createElement("button");
                 button.innerHTML = "Eliminar";
-                //I have to make the button actually remove its associated channel
                 a.href = "#";
                 a.innerHTML = '#' + channelName;
                 div.appendChild(a);
                 div.appendChild(button);
                 side_nav.appendChild(div);
-                //Why is this not pushing properly to the array??
                 channelArray.push(div);
                 channelInput.parentNode.remove();
                 //channel remove listener
