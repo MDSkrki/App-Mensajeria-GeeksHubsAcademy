@@ -10,7 +10,6 @@ let selectedChannel = "#default channel";
 //Channel naming
 title.innerHTML = selectedChannel;
 
-
 // Sidebar Navigation Open-Collapse System
 const toggleSideBar = () => {
     if (side_nav.state == "closed") {
@@ -24,10 +23,7 @@ const toggleSideBar = () => {
     }
 }
 
-
-
-
-//message creation system
+//Message Creation System
 let messageArray = [];
 let channelArray = [];
 
@@ -35,7 +31,6 @@ const writeMessage = () => {
     let div = document.createElement("div");
     div.id = "messageDiv";
     div.class = "messageDiv";
-    //div.setAttribute("style", "width: 100%;border-style: dotted;display: block;");
     let span = document.createElement("span");
     span.id = "messages_span";
     let date = new Date();
@@ -63,6 +58,8 @@ message_input.addEventListener("keydown", function(event) {
     }
 })
 
+// Channel Creation System
+// creates input to name the channel
 const channelInputCreator = () => {
     let div = document.createElement("div");
     div.innerHTML = "<input type='text' id='channelInput'>";
