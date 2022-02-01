@@ -37,12 +37,12 @@ const writeMessage = () => {
     let dateSpan = document.createElement("span");
     dateSpan.id = "date_span";
     dateSpan.innerHTML = date.getDate() + '/' + date.getMonth() + '/' +  date.getFullYear() + ' ' + date.getHours() + 'h ' + date.getMinutes() + 'm ' +date.getSeconds() + 's </br>';
-    span.innerHTML = message_input.value;
     //create new message object to push to array
     let message = new Object();
     message.value = message_input.value;
     message.date = dateSpan.innerHTML;
     message.channel = selectedChannel;
+    span.innerHTML = message.value;
     messages_view.appendChild(div);
     div.appendChild(span);
     div.appendChild(dateSpan);
@@ -114,7 +114,6 @@ const channelCreator = () => {
                                     displayedMessages[j].style.display = "block";
                                 } else {
                                     displayedMessages[j].style.display = "none";
-                                    console.log("Haha i hid a message");
                                 }
                             }
                         }
@@ -127,14 +126,13 @@ const channelCreator = () => {
     });
 }
 
+
 const searchMessages = () => {
     let search = searchInput.value;
     let displayedMessages = messages_view.getElementsByTagName("div");
     for (let i=0; i<messageArray.length;i++) {
-        if(messageArray[i].value.toLowerCase().includes(search)) {
+        if(messageArray[i].value.toLowerCase().includes(search) && search.length > 0) {
             displayedMessages[i].style.display = "block";
-        } else if (search == "") {
-            break;
         } else {
             displayedMessages[i].style.display = "none";
         }
