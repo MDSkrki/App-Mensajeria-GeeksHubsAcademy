@@ -7,6 +7,8 @@ let message_input = document.getElementById("message_input");
 let searchInput = document.getElementById("search");
 let title = document.getElementById("title");
 let selectedChannel = "#default channel";
+//Channel naming
+title.innerHTML = selectedChannel;
 
 
 // Sidebar Navigation Open-Collapse System
@@ -22,8 +24,7 @@ const toggleSideBar = () => {
     }
 }
 
-//Channel control system
-title.innerHTML = selectedChannel;
+
 
 
 //message creation system
