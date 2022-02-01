@@ -133,6 +133,8 @@ const searchMessages = () => {
     for (let i=0; i<messageArray.length;i++) {
         if(messageArray[i].value.toLowerCase().includes(search)) {
             displayedMessages[i].style.display = "block";
+        } else if (search == "") {
+            break;
         } else {
             displayedMessages[i].style.display = "none";
         }
