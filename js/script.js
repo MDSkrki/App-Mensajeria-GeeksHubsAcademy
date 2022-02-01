@@ -6,8 +6,8 @@ let messages_view = document.getElementById("messages_view");
 let message_input = document.getElementById("message_input");
 let searchInput = document.getElementById("search");
 let title = document.getElementById("title");
-let selectedChannel = "#default channel";
-//Channel naming
+let selectedChannel = "";
+//Setting the channel name
 title.innerHTML = selectedChannel;
 
 // Sidebar Navigation Open-Collapse System
@@ -43,6 +43,7 @@ const writeMessage = () => {
     message.date = dateSpan.innerHTML;
     message.channel = selectedChannel;
     span.innerHTML = message.value;
+    //pushing the messages to their containers and array
     messages_view.appendChild(div);
     div.appendChild(span);
     div.appendChild(dateSpan);
