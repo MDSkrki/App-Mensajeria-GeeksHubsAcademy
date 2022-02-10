@@ -10,10 +10,10 @@
 4. Los mensajes tienen que mostrar la fecha y hora en la que se crearon
 5. Los usuarios tienen que poder buscar entre todos los mensajes de todos los canales en un buscador global
 
-## Cómo descargar y usar la app
+## Cómo descargar y usar la app 🥷
 
-## Tareas pendientes
+## Tareas pendientes 🧙
 
-## Funcionalidad de la App
+## Funcionalidad de la App 🕹
 
-## Stack tecnológico
+## Stack tecnológico 🛠
