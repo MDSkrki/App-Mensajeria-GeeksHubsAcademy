@@ -17,3 +17,5 @@
 ## Funcionalidad de la App 🕹
 
 ## Stack tecnológico 🛠
+
+## Cómo colaborar 🤝
