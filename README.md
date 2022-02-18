@@ -17,14 +17,14 @@ Reto final Programacion desde Cero GeeksHubs Academy
 
 *Debido al comienzo del Bootcamp FullStack dejo algunas tareas pendientes para realizar en otro momento, o abierto para colaboración*
 
-- Limpieza del código (console.logs, commentarios sueltos, ordenar código por categoría, etc...)
-- Refactorizar código para cumplir con los principios SOLID
-- Añadir diseño flexbox en la presentación de los mensajes
-- Responsive Web Design
-- Renombrar contenedores div para que cumplan normas de accesibilidad
-- Añadir funcionalidad asíncrona a la creación de canales y a la escritura de mensajes
-- Quitar el canal "default" y reemplazarlo por una simple guía para crear el primer canal
-- Hacer que salga del canal cuando uno borra el canal que tiene abierto (y añadir alerta para confirmar en tal caso)
+- [ ] Limpieza del código (console.logs, commentarios sueltos, ordenar código por categoría, etc...)
+- [ ] Refactorizar código para cumplir con los principios SOLID
+- [ ] Añadir diseño flexbox en la presentación de los mensajes
+- [ ] Responsive Web Design
+- [ ] Renombrar contenedores div para que cumplan normas de accesibilidad
+- [ ] Añadir funcionalidad asíncrona a la creación de canales y a la escritura de mensajes
+- [ ] Quitar el canal "default" y reemplazarlo por una simple guía para crear el primer canal
+- [ ] Hacer que salga del canal cuando uno borra el canal que tiene abierto (y añadir alerta para confirmar en tal caso)
 
 ## Funcionalidad de la App 🕹
 
